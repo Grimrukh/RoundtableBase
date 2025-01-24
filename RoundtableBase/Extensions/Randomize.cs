@@ -5,9 +5,9 @@ namespace RoundtableBase.Extensions;
 /// <summary>
 /// Extensions that support quick random operations.
 /// </summary>
-public static class Random
+public static class Randomize
 {
-    static System.Random Rand = new();
+    static Random Rand = new();
 
     /// <summary>
     /// Initialize `Rand` to an optionally known `seed` (defaults to `null`).
@@ -15,7 +15,7 @@ public static class Random
     /// <param name="seed"></param>
     public static void SetRand(int? seed = null)
     {
-        Rand = seed == null ? new System.Random() : new System.Random(seed.Value);
+        Rand = seed == null ? new Random() : new Random(seed.Value);
     }
 
     /// <summary>
