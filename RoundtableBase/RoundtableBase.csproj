@@ -12,7 +12,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="$(SolutionDir)\Dependencies\SoulsFormats\SoulsFormats\SoulsFormats.csproj" />
+        <ProjectReference Include="$(SolutionDir)Dependencies\SoulsFormats\SoulsFormats\SoulsFormats.csproj" />
     </ItemGroup>
 
 </Project>
