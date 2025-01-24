@@ -1,0 +1,3 @@
+[submodule "Dependencies/SoulsFormats"]
+	path = Dependencies/SoulsFormats
+	url = ssh://git@github.com/Grimrukh/SoulsFormats.git
