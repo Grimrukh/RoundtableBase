@@ -13,6 +13,11 @@
 
     <ItemGroup>
         <ProjectReference Include="$(SolutionDir)Dependencies\SoulsFormats\SoulsFormats\SoulsFormats.csproj" />
+        <ProjectReference Include="$(SolutionDir)Dependencies\PropertyHook\PropertyHook\PropertyHook.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="keystoneengine.csharp" Version="0.9.1.1" />
     </ItemGroup>
 
 </Project>
