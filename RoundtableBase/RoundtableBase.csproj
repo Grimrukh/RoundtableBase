@@ -6,17 +6,13 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
-    <!-- Check if flat mode dependency exists -->
-    <PropertyGroup Condition="Exists('..\SoulsFormats\SoulsFormats\SoulsFormats.csproj')">
-        <SoulsFormatsPath>..\SoulsFormats\SoulsFormats\SoulsFormats.csproj</SoulsFormatsPath>
-    </PropertyGroup>
-    <!-- Fallback to standalone mode dependency -->
-    <PropertyGroup Condition="!Exists('..\SoulsFormats\SoulsFormats\SoulsFormats.csproj')">
-        <SoulsFormatsPath>..\Dependencies\SoulsFormats\SoulsFormats\SoulsFormats.csproj</SoulsFormatsPath>
+    <PropertyGroup>
+        <!-- Check if SolutionDir is defined and default to '..\' if absent -->
+        <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="$(SoulsFormatsPath)" />
+        <ProjectReference Include="$(SolutionDir)\Dependencies\SoulsFormats\SoulsFormats\SoulsFormats.csproj" />
     </ItemGroup>
 
 </Project>
